@@ -1,0 +1,36 @@
+playNpause(button) {
+        console.log("playFOOTER");
+        if (button.src.indexOf("pics/play.png") > -1) {
+            $("#audio").trigger("play");
+            button.src = "pics/pause.png";
+        } else {
+            button.src = "pics/play.png"
+            $("#audio").trigger("pause");
+        }
+    }
+
+    stop() {
+        console.log("stopFOOTER");
+        $("#audio").trigger("pause");
+        $("#audio").currentTime = 0;
+        $("#play")[0].src = "pics/play.png";
+    }
+
+    attachFile(button, album, key) {
+        if (this.firstLoad) {
+            console.log("load'n'play " + key.file);
+            $("#audio").attr("src", album + "/" + key.file);
+            $("#audio").trigger("load");
+            $("#audio").trigger("play");
+            this.firstLoad = false;
+        }
+        if (button.src.indexOf("pics/play.png") > -1) {
+            $("#audio").trigger("play");
+            button.src = "pics/pause.png";
+            $("#play")[0].src = "pics/pause.png";
+        } else {
+            $("#audio").trigger("pause");
+            button.src = "pics/play.png";
+            $("#play")[0].src = "pics/play.png";
+        }
+    }

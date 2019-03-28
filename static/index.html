@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Szmitek Król</title>
+    <script src="jq331.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.gif" type="image/gif">
+</head>
+
+<body>
+    <div id="darkmode">
+        <button id="dmOff"> Off </button>
+        <div id="visual"></div>
+        <!-- <canvas id="canvas" width="800px" height="350px"></canvas> -->
+        <div id="spectrum"></div>
+    </div>
+    <main>
+        <div id="icodiv"></div>
+        <div id="right">
+            <div id="title">
+                <h1> MP3player </h1>
+            </div>
+            <div id="tabdiv"></div>
+        </div>
+    </main>
+    <footer>
+        <button id="removePlaylist"> Delete playlist </button>
+        <button id="dmOn"> Darkmode </button>
+        <div id="graph"></div>
+        <div id="playlistList">
+            <table id="playlistTab"></table>
+        </div>
+        <audio id="audio" controls>
+            <source id="audio_src" type="audio/mp3" />
+        </audio>
+        <div id="info">
+            <img id="albumImg">
+            <p id="albumTitle"></p>
+            <p id="songTitle"></p>
+            <div id="audioControls">
+                <img src="pics/prev.png" alt="prev" id="prev" class="musicControls">
+                <img src="pics/play.png" alt="play" id="play" class="musicControls">
+                <img src="pics/stop.png" alt="stop" id="stop" class="musicControls">
+                <img src="pics/next.png" alt="next" id="next" class="musicControls">
+                <div id="bar"></div>
+                <div id="progress"></div>
+                <div id="time">
+                    <p id="currentTime"></p>
+                    /
+                    <p id="duration"></p>
+                </div>
+                <div id="volumeDiv">
+                    <input type="range" orient="vertical" id="volume" min="0" max="100">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="ui.js"></script>
+    <script src="net.js"></script>
+    <script src="music.js"></script>
+    <script src="visual.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

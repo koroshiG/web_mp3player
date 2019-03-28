@@ -1,0 +1,349 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+@font-face {
+    font-family: skyfont;
+    src: url("fonts/skyfont.otf")
+}
+
+@font-face {
+    font-family: running;
+    src: url("fonts/running.ttf")
+}
+
+@font-face {
+    font-family: DiscoDiva;
+    src: url("fonts/DiscoDiva.ttf")
+}
+
+
+#icodiv {
+    float: left;
+    width: 25%;
+    height: 80vh;
+    background: #2e303e;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+#icodiv>img {
+    width: 250px;
+}
+
+h1 {
+    background: none;
+    font-family: DiscoDiva;
+    font-size: 60px;
+}
+
+#title {
+    background: #263233;
+    color: aliceblue;
+    height: 10vh;
+    min-height: 70px;
+    text-align: center;
+}
+
+#tabdiv {
+    height: 70vh;
+    overflow-y: scroll;
+    background: #6c759c;
+}
+
+#right {
+    float: right;
+    width: 75%;
+    height: 80vh;
+    overflow: hidden;
+    background: #9199be;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 20vh;
+    width: 100%;
+    min-width: 1500px;
+    clear: both;
+    background: #263233;
+}
+
+audio {
+    display: none;
+}
+
+.musicControls {
+    position: relative;
+    height: 5vh;
+    min-height: 25px;
+    filter: invert(0.7);
+    z-index: 2;
+}
+
+.musicControls:hover{
+    filter: invert(0.3);
+}
+
+#audioControls {
+    text-align: center;
+    position: absolute;
+    height: 16vh;
+    left: 225px;
+    top: 10vh;
+}
+
+#play {
+    margin-right: 0.2vw;
+    height: 6.5vh;
+}
+
+#stop {
+    height: 6.5vh;
+}
+
+#prev,
+#next {
+    top: -1vh;
+}
+
+#bar {
+    position: relative;
+    top: 0vh;
+    left: 0;
+    width: 100%;
+    height: 0.5vh;
+    background: #9199be;
+    z-index: 3;
+}
+
+#progress {
+    position: relative;
+    top: -0.5vh;
+    left: 0;
+    width: 0;
+    height: 0.5vh;
+    background: rgb(28, 78, 139);
+    z-index: 3;
+}
+
+#songTab {
+    color: aliceblue;
+    font-size: 2.3vh;
+    border: none;
+    border-collapse: collapse;
+}
+
+#songTab td {
+    text-align: center;
+    padding: 1.5%;
+    width: 25%;
+}
+
+#songTab img {
+    width: 35%;
+    padding-right: 5%;
+    filter: invert(0.7);
+}
+
+#songTab img:hover{
+    filter: invert(0.3);
+}
+
+.colorOne td {
+    background: #9199be;
+}
+
+.colorTwo td {
+    background: #54678f;
+}
+
+.colorPlaying td {
+    background: #0c213a;
+}
+
+tr:hover td{
+    background: #0c213a;
+}
+
+#info {
+    color: aliceblue;
+    position: relative;
+    width: 33vw;
+    height: 100%;
+    min-width: 475px;
+    background: #263233;
+    z-index: 3;
+}
+
+#albumImg {
+    height: 20vh;
+    z-index: 3;
+}
+
+#albumTitle {
+    position: absolute;
+    left: 225px;
+    top: 1vh;
+    font-size: 1.8vh;
+    z-index: 3;
+}
+
+#songTitle {
+    word-wrap: normal;
+    position: absolute;
+    left: 225px;
+    top: 3vh;
+    font-size: 2.5vh;
+    height: 3vh;
+    max-width: 350px;
+    overflow-x: hidden;
+    z-index: 3;
+}
+
+#time{
+    display: none;
+    position: absolute;
+    left: 65px;
+    top: 7.5vh;
+    width: 100px;
+    z-index: 3;
+}
+
+#time p{
+    display: inline-block;
+}
+
+#playPlaylist{
+    position: absolute;
+    left: 60%;
+}
+
+#playlistList{
+    font-size: 1.5vh;
+    color: aliceblue;
+    position: absolute;
+    width: 400px;
+    height: 90%;
+    left: 70%;
+    top: 1vh;
+    background: #608285;
+    overflow-y: scroll; 
+}
+
+#playlistTab{
+    color: aliceblue;
+    border: none;
+    border-collapse: collapse;
+}
+
+#playlistTab td{
+    text-align: center;
+    padding: 1% 1.5%;
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#playlistTab img {
+    display: inline-block;
+    width: 30%;
+    padding-right: 5%;
+    filter: invert(0.7);
+}
+
+#playlistTab img:hover{
+    filter: invert(0.3);
+}
+
+#removePlaylist{
+    position: absolute;
+    left: 64.25%;
+    top: 1vh;
+    width: 5%;
+    max-width: 80px;
+    height: 42.5%;
+    background: red;
+}
+
+#volumeDiv{
+    position: relative;
+    left: 250px;
+    top: -18vh;
+    padding-top: 1vh;
+    width: 2vw;
+    height: 20vh;
+    z-index: 3;
+}
+
+#volume{
+    height: 18vh;
+}
+
+#darkmode{
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    z-index: 50;
+    background: #000000ff;
+    width: 100vw;
+    height: 80%;
+}
+
+#dmOn{
+    position: absolute;
+    left: 64.25%;
+    top: 10.5vh;
+    width: 5%;
+    max-width: 80px;
+    height: 42.5%;
+    background: #9199be;
+}
+
+#dmOff{
+    position: absolute;
+    left: 0vw;
+    top: 0vh;
+    width: 100%;
+    min-width: 50px;
+    height: 5%;
+    background: #0c213a;
+    border: #0c213a;
+    color: #9199be;
+    font-size: 2vh;
+}
+
+#visual{
+    position: absolute;
+    left: 0vw;
+    top: 10vh;
+    width: 100%;
+    min-width: 50px;
+    height: 90%;
+    color: #9199be;
+    font-size: 1.2vh; 
+}
+
+#spectrum{
+    position: absolute;
+    top: 17vh;
+    background: inherit;
+    width: 90%;
+    height: 60vh;
+}
+
+#graph{
+    font-size: 1.5vh;
+    color: aliceblue;
+    position: absolute;
+    width: 450px;
+    height: 90%;
+    left: 33.5%;
+    top: 1vh;
+    background: #608285;
+    overflow: hidden;
+}
